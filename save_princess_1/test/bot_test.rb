@@ -34,5 +34,4 @@ class BotTest < Minitest::Test
     assert_equal ["UP\n", "UP\n", "UP\n", "LEFT\n", "LEFT\n", "LEFT\n"], bot.displayPath
   end
 
-
 end
