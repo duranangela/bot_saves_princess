@@ -22,8 +22,8 @@ class Bot
     princess = find_princess
 
     moves.times do
-      princess[0] == 0 ? solution << "UP\n" : solution << "DOWN\n"
-      princess[1] == 0 ? solution << "LEFT\n" : solution << "RIGHT\n"
+      solution << (princess[0] == 0 ? "UP\n" : "DOWN\n")
+      solution << (princess[1] == 0 ? "LEFT\n" : "RIGHT\n")
     end
 
     solution
