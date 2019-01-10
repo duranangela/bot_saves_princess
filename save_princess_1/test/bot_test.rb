@@ -21,7 +21,7 @@ class BotTest < Minitest::Test
 
   def test_it_can_find_path_3x3_grid
     bot = Bot.new(3, ['--p', '-m-', '---'])
-    assert_equal "UP\n, RIGHT\n", bot.displayPath
+    assert_equal ["UP\n", "RIGHT\n"], bot.displayPath
   end
 
 end
