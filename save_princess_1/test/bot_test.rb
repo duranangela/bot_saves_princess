@@ -24,4 +24,15 @@ class BotTest < Minitest::Test
     assert_equal ["UP\n", "RIGHT\n"], bot.displayPath
   end
 
+  def test_it_can_find_path_5x5_grid
+    bot = Bot.new(5, ["-----", "-----", "--m--", "-----", "p----"])
+    assert_equal ["DOWN\n", "DOWN\n", "LEFT\n", "LEFT\n"], bot.displayPath
+  end
+
+  def test_it_can_find_path_7x7_grid
+    bot = Bot.new(7, ["p------", "-------", "-------", "---m---", "-------", "-------", "-------"])
+    assert_equal ["UP\n", "UP\n", "UP\n", "LEFT\n", "LEFT\n", "LEFT\n"], bot.displayPath
+  end
+
+
 end

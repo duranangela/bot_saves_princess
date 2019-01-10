@@ -47,6 +47,3 @@ class Bot
   end
 
 end
-
-bot = Bot.new(5, ["----p", "-----", "--m--", "-----", "-----"])
-bot.displayPath
