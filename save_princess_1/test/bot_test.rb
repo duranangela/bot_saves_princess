@@ -9,4 +9,9 @@ class BotTest < Minitest::Test
     assert_instance_of Bot, bot
   end
 
+  def test_it_can_locate_the_princess
+    bot = Bot.new(3, ['--p', '-m-', '---'])
+    assert_equal [0,2], bot.find_princess
+  end
+
 end
