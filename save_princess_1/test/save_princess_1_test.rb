@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './save_princess_1/lib/bot'
+require './save_princess_1/lib/save_princess_1'
 
 class BotTest < Minitest::Test
 

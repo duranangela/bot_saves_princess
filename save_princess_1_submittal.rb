@@ -3,10 +3,10 @@ def displayPathtoPrincess(n, grid)
   moves = n / 2
   solution = []
 
-  grid.each_with_index do |line, index|
-    if line.include?('p')
+  grid.each_with_index do |row, index|
+    if row.include?('p')
       princess << index
-      princess << line.chars.index('p')
+      princess << row.chars.index('p')
     end
   end
 
