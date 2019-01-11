@@ -19,4 +19,9 @@ class BotTest < Minitest::Test
     assert_equal [1, 1], bot.find_princess
   end
 
+  def test_it_can_find_next_move_3x3_grid
+    bot = Bot.new(3, 1, 2, ['---', 'p-m', '---'])
+    assert_equal ["LEFT"], bot.next_move
+  end
+
 end
