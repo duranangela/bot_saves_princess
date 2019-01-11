@@ -20,16 +20,13 @@ class Bot
 
   def next_move
     princess = find_princess
-    if @r > princess[0]
-       "UP"
-    elsif @r < princess[0]
-       "DOWN"
-    elsif @r == princess[0]
-      if @c > princess[1]
-         "LEFT"
-      else
-         "RIGHT"
-      end
+    case
+    when @r > princess[0]
+      "UP"
+    when @r < princess[0]
+      "DOWN"
+    when @r == princess[0]
+      (@c > princess[1]) ? ("LEFT") : ("RIGHT")
     end
   end
 
