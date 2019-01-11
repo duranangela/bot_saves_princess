@@ -7,5 +7,15 @@ class Bot
     @grid = grid
   end
 
+  def find_princess
+    princess = []
+    @grid.each_with_index do |row, index|
+      if row.include?('p')
+        princess << index
+        princess << row.chars.index('p')
+      end
+    end
+    princess
+  end
 
 end
