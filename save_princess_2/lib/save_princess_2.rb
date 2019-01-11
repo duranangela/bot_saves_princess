@@ -18,4 +18,19 @@ class Bot
     princess
   end
 
+  def next_move
+    princess = find_princess
+    if @r > princess[0]
+       "UP"
+    elsif @r < princess[0]
+       "DOWN"
+    elsif @r == princess[0]
+      if @c > princess[1]
+         "LEFT"
+      else
+         "RIGHT"
+      end
+    end
+  end
+
 end

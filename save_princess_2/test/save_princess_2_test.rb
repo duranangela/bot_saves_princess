@@ -21,7 +21,7 @@ class BotTest < Minitest::Test
 
   def test_it_can_find_next_move_3x3_grid
     bot = Bot.new(3, 1, 2, ['---', 'p-m', '---'])
-    assert_equal ["LEFT"], bot.next_move
+    assert_equal "LEFT", bot.next_move
   end
 
 end
