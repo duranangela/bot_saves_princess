@@ -14,4 +14,9 @@ class BotTest < Minitest::Test
     assert_equal [1,0], bot.find_princess
   end
 
+  def test_it_can_locate_the_princess_with_5x5_grid
+    bot = Bot.new(5, 2, 3, ["-----", "-p---", "---m-", "-----", "-----"])
+    assert_equal [1, 1], bot.find_princess
+  end
+
 end
